@@ -14,6 +14,14 @@ INSERT INTO book (title, pub_year, page_count) VALUES
   ('Волки Кальи', '2007-11-05', 793),
   ('Темная Башня', '2007-11-05', 818);
 
+UPDATE book
+SET created_at = '2017-06-25'::TIMESTAMP
+WHERE book_id IN (1, 2, 3);
+
+UPDATE book
+SET created_at = '2017-06-26'::TIMESTAMP
+WHERE book_id IN (4, 5, 6);
+
 INSERT INTO genre (name) VALUES
   ('Фантастика'), ('Космическая фантастика'), ('Фентези'), ('Ужасы');
 
